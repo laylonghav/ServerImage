@@ -1,0 +1,18 @@
+
+> Step 1: Install Cloudinary SDK and required packages
+
+npm install cloudinary multer multer-storage-cloudinary
+
+> Step 2: Configure Cloudinary
+    Create a new file: cloudinaryConfig.js
+
+// Utils/helper/cloudinaryConfig.js
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+  cloud_name: 'YOUR_CLOUD_NAME',
+  api_key: 'YOUR_API_KEY',
+  api_secret: 'YOUR_API_SECRET',
+});
+
+module.exports = { cloudinary };
